@@ -1,0 +1,3 @@
+multimap<string, string> events;
+
+multimap permite almacenar pares, donde un mismo value puede estar asignado diferentes keys.
