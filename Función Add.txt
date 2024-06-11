@@ -1,0 +1,3 @@
+void Add(multimap<string, string>& BD, string info1, string info2){
+    BD.insert(make_pair(info1, info2));
+}
