@@ -1,0 +1,65 @@
+En principio cree un algoritmo para la division del input del usuario:
+
+	string str1;
+	string instruction;
+	string info1;
+	string info2;
+	int i = 0;
+
+	getline(cin, str1);
+        
+        instruction = "";
+        info1 = "";
+        info2 = "";
+        i = 0;
+
+        for(; i < str1. size(); ++i){
+            if(str1[i] != ' '){
+                instruction += str1[i];
+            }
+            else{
+                break;
+            }
+        }
+        ++i;
+        for(; i < str1.size(); ++i){
+            if(str1[i] != ' '){
+                info1 += str1[i];
+            }
+            else{
+                break;   
+            }
+        }
+        ++i;
+        for(; i < str1.size(); ++i){
+            info2 += str1[i];
+        }
+
+
+Pero el código se hacia mas largo y complicado de leer y entender, es así que investigue una forma mas sencilla y encontré la librería <sstream>
+
+	string str1;
+	string instruction;
+	string info1;
+	string info2;
+
+	getline(cin, str1);
+        stringstream ss(str1);
+        getline(ss, instruction, ' ');
+        getline(ss, info1, ' ');
+        getline(ss, info2);
+        
+        if(instruction == "Del"){
+            Del_function(events, info1, info2);
+        }
+        if(instruction == "Print"){
+            Print(events);
+        }
+        if(instruction == "Find"){
+            Find(events, info1);
+        }
+        
+        instruction.clear();
+        info1.clear();
+        info2.clear();
+	str1.clear();
