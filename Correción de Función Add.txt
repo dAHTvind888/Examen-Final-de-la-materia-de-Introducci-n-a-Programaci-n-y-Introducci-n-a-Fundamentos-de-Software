@@ -1,0 +1,8 @@
+void Add(multimap<string, string>& events, string info1, string info2){
+    for(const auto& element : events){
+        if(info1 == element.first && info2 == element.second){
+            return;
+        }
+    }
+    events.insert(make_pair(info1, info2));
+}
