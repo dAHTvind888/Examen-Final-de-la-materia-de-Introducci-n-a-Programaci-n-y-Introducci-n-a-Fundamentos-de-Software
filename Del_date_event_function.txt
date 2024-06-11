@@ -1,0 +1,14 @@
+void Del_date_event(multimap<string, string>& events, string info1, string info2){
+    auto range = events.equal_range(info1);
+    for(auto i = range.first; i != range.second;){
+        if(i -> second == info2){
+            i = events.erase(i); //erase borra el i actual y amuenta en uno su valor
+            cout << "Deleted successfully" << endl;
+            return;
+        }
+        else{
+            ++i;
+        }
+    }
+    cout << "Event not found" << endl;
+}
