@@ -1,0 +1,11 @@
+void Find(const multimap<string, string>& events, string info1){
+    //Iterates through the multimap event 
+    for(const auto& element : events){
+        //if the date is the same as the date introduced by the user...
+        if(element.first == info1){
+            //Prints the events assigned to that date
+            cout << element.second << endl;
+        }
+    }
+
+}
