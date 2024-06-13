@@ -1,0 +1,6 @@
+void Print(const multimap<string, string>& events){
+    string year;
+    for(const auto& element : events){
+            cout << element.first << " " << element.second << endl;
+	}
+}
