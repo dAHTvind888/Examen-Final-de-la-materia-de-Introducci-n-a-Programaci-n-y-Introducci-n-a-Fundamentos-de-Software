@@ -1,4 +1,4 @@
-bool check_double_neg(string s){
+bool check_hyphen(string s){
     int negative = 0;
     //Itera a través de la cadena s, buscando caracteres que cumplan con la declaración if
     for(char c : s){
