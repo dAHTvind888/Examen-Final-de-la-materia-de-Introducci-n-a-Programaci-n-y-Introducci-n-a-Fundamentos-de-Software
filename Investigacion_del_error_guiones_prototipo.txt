@@ -1,0 +1,31 @@
+#include <map>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <sstream>
+using namespace std;
+
+bool check_neg_month_day(const string& s){ 2024--01-01
+    int negative = 0;
+    for(char c : s){
+        if(c == '-'){
+            ++negative;
+            if(negative == 2){
+                cout << "Negative Month or Day" << endl;
+                return false;
+            }
+        }
+        else{
+            negative = 0;
+            continue;
+        }
+    }
+    cout << "No negative month or day" << endl;
+    return true;
+}
+
+int main() {
+    //No doble --
+    string str1 = "1---1---1";
+    check_neg_month_day(str1);
+}
