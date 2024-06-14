@@ -1,0 +1,17 @@
+void Del_complete(multimap<string, string>& events, string info1){
+    int j = 0;
+    //It is not necessary to make a range variable 
+    for(auto i = events.begin(); i != events.end();){
+    //Do not increase i via the for loop statement, 
+        if(i -> first == info1){
+            //Update i via the erase function, since erase increases i by one
+            i = events.erase(i);
+            ++j;
+        }
+        //In case i is not updated by erase, do it in an else statement
+        else{
+            ++i;
+        }
+    }
+    cout << "Deleted " << j << " events" << endl;
+}
