@@ -1,0 +1,79 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+string str1;
+string instruction;
+string info1;
+string info2;
+string year;
+string aux;
+string month;
+string day;
+string date;
+int main() {
+    getline(cin, str1);
+    stringstream ss(str1);
+    getline(ss, instruction, ' ');
+    getline(ss, info1, ' ');
+    getline(ss, info2, ' ');
+    stringstream s1(info1);
+    if(info1[0] == '-'){
+    cout << 1 << endl;
+    }
+    else{
+    getline(s1, year, '-');
+    }
+    getline(s1, month, '-');
+    getline(s1, day, '-');
+    int x = stoi(year);
+    int y = stoi(month);
+    int z = stoi(day);
+    year = to_string(x);
+    day = to_string(z);
+    month = to_string(y);
+    if(year.size() == 1){
+        string predeterminado1 = "000";
+        predeterminado1 += year;
+        date += predeterminado1;
+    }
+    else if(year.size() == 2){
+        string predeterminado1 = "00";
+        predeterminado1 += year;
+        date += predeterminado1;
+    }
+    else if(year.size() == 3){
+        string predeterminado1 = "0";
+        predeterminado1 += year;
+        date += predeterminado1;
+    }
+    else{
+        date += year;
+    }
+    if(month.size() == 1){
+        string predeterminado1 = "0";
+        predeterminado1 += month;
+        date += '-';
+        date += predeterminado1;
+    }
+    else{
+        date += '-';
+        date += month;
+    }
+    if(day.size() == 1){
+        string predeterminado1 = "0";
+        predeterminado1 += day;
+        date += '-';
+        date += predeterminado1;
+    }
+    else{
+        date += '-';
+        date += day;
+    }
+    cout << instruction << endl;
+    cout << date << endl;
+    cout << info2 << endl;
+
+    return 0;
+}
