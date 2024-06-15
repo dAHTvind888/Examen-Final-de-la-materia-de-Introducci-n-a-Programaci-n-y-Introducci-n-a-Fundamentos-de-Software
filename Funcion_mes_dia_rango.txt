@@ -1,0 +1,23 @@
+bool check_date_range(string s){
+    string year, month, day;
+    stringstream date(s);
+    getline(date, year, '-');
+    getline(date, month, '-');
+    getline(date, day, '-');
+    
+    int year_int = stoi(year);
+    int month_int = stoi(month);
+    int day_int = stoi(day);
+    //Se asegura que el mes este entre el rango 1 y 12
+    if(month_int <= 0 || month_int > 12){
+        cout << "Month value is invalid: " + month << endl;    
+        return false;
+    }
+    //Caso contrario, se asegura que el dia este entre el rango 1 y 31
+    else if(day_int < 1 || day_int > 31){
+        cout << "Day value is invalid: " + day << endl;
+        return false;
+    }
+    //Si el mes y dia estan en la rango adecuado, la funcion devuelve true, en señal de que la fecha esta bien en este sentido
+    return true;
+}

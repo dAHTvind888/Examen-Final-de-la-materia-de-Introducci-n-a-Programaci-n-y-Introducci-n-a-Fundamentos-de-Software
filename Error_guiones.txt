@@ -1,0 +1,22 @@
+bool check_hyphen(string s){
+    int negative = 0;
+    //Itera a través de la cadena s, buscando caracteres que cumplan con la declaración if
+    for(char c : s){
+	//si el carácter es el mismo '-', aumenta negative más uno
+        if(c == '-'){
+            ++negative;
+	    //si negative es igual a dos, entonces esto significa que hay un error en s
+            if(negative == 2){
+                cout << "Wrong date format: " + s << endl;
+                return false;
+            }
+        }
+	//Si c no es igual a '-', negative se restablece a 0
+	//Esto se debe a que para que s sea incorrecto, s necesita tener dos o mas '-' consecutivos
+        else{
+            negative = 0;
+            continue;
+        }
+    }
+    return true;    
+}
