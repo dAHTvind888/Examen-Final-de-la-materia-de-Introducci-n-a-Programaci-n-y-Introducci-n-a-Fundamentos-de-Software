@@ -238,9 +238,9 @@ Print = Muestra los eventos;
 ]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-Pseudocódigo
+Diagrama de Flujo
 
-
+Se encuentra dentro de la Rama Main Como diagrama de Flujo, debido a su tamaño es necesario abrirlo en draw.io
 
 Referencias
 
