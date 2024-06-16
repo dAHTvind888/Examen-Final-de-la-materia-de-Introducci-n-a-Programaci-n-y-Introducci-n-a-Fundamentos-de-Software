@@ -1,0 +1,31 @@
+bool check_date_range(string s){
+    string year, month, day, aux_s;
+    //Evitamos que años negativos produzcan comportamientos erroneos
+    if(s[0] == '-'){
+        for(int i = 1; i < s.size(); ++i){
+            aux_s += s[i];
+        }
+    }
+    else{
+        aux_s = s;
+    }
+    
+    stringstream date(aux_s);
+    getline(date, year, '-');
+    getline(date, month, '-');
+    getline(date, day, ' ');
+    
+    int year_int = stoi(year);
+    int month_int = stoi(month);
+    int day_int = stoi(day);
+    
+    if(month_int <= 0 || month_int > 12){
+        cout << "Month value is invalid: " + month << endl;    
+        return false;
+    }
+    else if(day_int < 1 || day_int > 31){
+        cout << "Day value is invalid: " + day << endl;
+        return false;
+    }
+    return true;
+}
