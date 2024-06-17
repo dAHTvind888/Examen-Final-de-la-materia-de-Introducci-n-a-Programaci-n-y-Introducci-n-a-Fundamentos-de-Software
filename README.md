@@ -240,6 +240,8 @@ Print = Muestra los eventos;
 
 Diagrama de Flujo
 
+![examen_final](https://github.com/Kal222000/Examen-Final-de-la-materia-de-Introducci-n-a-Programaci-n-y-Introducci-n-a-Fundamentos-de-Software/assets/160258022/39c1495b-aa3b-4553-8afb-055861b74918)
+
 Se encuentra dentro de la Rama Main Como diagrama de Flujo, debido a su tamaño es necesario abrirlo en draw.io
 
 Referencias
